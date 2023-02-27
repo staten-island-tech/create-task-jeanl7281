@@ -9,22 +9,22 @@
     <div id="app"></div>
     <body>
       <button class="allBtn">all</button>
-      <div class="form-container">
-                <form class="form">
-                    <input id="search" type="text" class="input" placeholder="search..."/>
-                    <button id="clear" class="results">clear</button>
+      <div class="search-div">
+                <form class="search" id="form" action="submit">
+                    <input class="search-bar" id="input" type="text" placeholder="search for article..."/>
+                    <button class="btn">clear</button>
                 </form>
  
       </div>
       <div id="parent">
       </div>
-      <div class="results-container>
+      <div class="results-container">
          <ul class="results-list" id="list">
  
          </ul>
       </div>
  
-         <script src="./JS/main.js"></script>
+         <script type="module" src="./JS/main.js"></script>
       </body>
 </html>
 

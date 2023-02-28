@@ -1,22 +1,23 @@
 import "./style.css";
 
 const URL =
-  "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=8e9bab4593cb4aa5beeca8173fc5b948";
+  "https://api.nytimes.com/svc/topstories/v2/home.json?api-key=4fw22uR3o7ORbmHGsqRgnyOqQMOFA6yL";
 
 async function getData(URL) {
   try {
     const response = await fetch(URL);
-    if ((response.status = "ok")) {
-      const articles = await response.json();
-      document.getElementById("api-response").textContent = articles.list;
-      console.log(articles);
-    } else {
+    if (response.status < 200 || response.status > 299) {
       throw Error(response.status);
+    } else {
+      const data = await response.json();
+      document.getElementById("api-response").textContent = data.list;
+      console.log(data);
     }
   } catch (Error) {
     console.log(Error);
     console.log(":/");
-    document.getElementById("api-response").textContent =
-      "Sorry we couldn't find the specified article";
+    "api-response".textContent = "Sorry we couldn't find the specified article";
   }
 }
+
+export { URL };

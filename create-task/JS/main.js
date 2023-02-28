@@ -1,6 +1,7 @@
 import "../styles/style.css";
 import "./api.js";
 import { DOMselectors } from "./dom";
+import { URL } from "./api.js";
 
 const filters = {
   removeCards: function () {
@@ -15,11 +16,11 @@ const filters = {
     const response = await fetch(URL);
     const data = await response.json();
     data.list
-      .filter((article) => article.rarity.name.includes(cardName))
+      .filter((article) => article.title.includes(cardName))
       .forEach((article) => {
         DOMselectors.parent.insertAdjacentHTML(
           "beforeend",
-          `<div id="parent"><sub class="child" > <h2 class="name">${article.name}</h2> <img class="img" src="${article.urlToImage}" alt="Image of ${article.title}" > <h3 class="desc">${article.description}</h3> <a href="${article.url}"><button class="link" confirm("Do you want to leave this page?")>Article Link</button></a></sub> </div>`
+          `<div id="parent"><sub class="child" > <h2 class="title">${article.title}</h2><h3 class="desc">${article.abstract}</h3> <a href="${article.short_url}"><button class="link" confirm("Do you want to leave this page?")>Article Link</button></a></sub> </div>`
         );
       });
   },
@@ -31,7 +32,7 @@ const filters = {
       .forEach((article) => {
         DOMselectors.parent.insertAdjacentHTML(
           "beforeend",
-          `<div id="parent"><sub class="child" > <h2 class="name">${article.name}</h2> <img class="img" src="${article.urlToImage}" alt="Image of ${article.name} in game" > <h3 class="author">${article.author}</h3><h3 class="desc">${article.description}</h3> <a href="${article.url}"><button class="link " confirm("Do you want to leave this page?")>Article Link</button></a></sub> </div>`
+          `<div id="parent"><sub class="child" > <h2 class="title">${article.title}</h2><h3 class="desc">${article.abstract}</h3> <a href="${article.short_url}"><button class="link" confirm("Do you want to leave this page?")>Article Link</button></a></sub> </div>`
         );
       });
   },
@@ -44,7 +45,7 @@ const functions = {
     articles.list.forEach((article) => {
       DOMselectors.parent.insertAdjacentHTML(
         "beforeend",
-        `<div id="parent"><sub class="child" > <h2 class="name">${article.name}</h2> <img class="img" src="${article.urlToImage}" alt="Image of ${article.name}"> <h3 class="author">${article.author}</h3> <h3 class="desc">${article.description}</h3> <a href="${article.link}" = "_blank" rel="r"><button class="link" onClick = "confirmFunction()">Article Link</button></a></sub> </div>`
+        `<div id="parent"><sub class="child" > <h2 class="title">${article.title}</h2><h3 class="desc">${article.abstract}</h3> <a href="${article.short_url}"><button class="link" confirm("Do you want to leave this page?")>Article Link</button></a></sub> </div>`
       );
     });
   },

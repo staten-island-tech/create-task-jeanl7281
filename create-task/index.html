@@ -5,33 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Create Task</title>
   </head>
-  <body>
+  <body class="dark">
+    <div class="maindiv" id="maindiv">
     <header>
-      <h1 id="Title">Article Search</h1>
+      <h1 id="Title">Articles</h1>
     </header>
-    <div id="api-response"></div>
-    <div id="btn-container">
-      <button class="filters allBtn">All</button>
-      <button class="filters worldBtn">World</button>
-      <button class="filters businessBtn">Business</button>
-      <button class="filters usBtn">U.S.</button>
-      <button class="filters opinionBtn">Opinions</button>
+      <button class="filters" id="all">All</button>
+      <button class="filters" id="world">World</button>
+      <button class="filters" id="business">Business</button>
+      <button class="filters" id="us">U.S.</button>
+      <button class="btn" id="btn">Theme</button>
     </div>
-      <div class="search-div">
-                <form class="search" id="form" action="submit">
-                    <input class="search-bar" id="input" type="text" placeholder="search for article..."/>
-                    <button class="searchBtn">clear</button>
-                </form>
- 
-      </div>
-      <div id="parent">
-      </div>
-      <div class="results-container">
-         <ul class="results-list" id="list">
- 
-         </ul>
-      </div>
- 
+    <section class="display" id="display"></section>
          <script type="module" src="./JS/main.js"></script>
       </body>
 </html>

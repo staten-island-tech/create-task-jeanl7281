@@ -22,7 +22,7 @@ console.log(create);
       articles.forEach((article) => {
         DOMSelectors.display.innerHTML = " ";
         DOMSelectors.maindiv.insertAdjacentHTML
-          ("beforeend",
+          ("afterend",
             `<div id="articlecard">
             <h2> ${article.title}<h2>
             <p id="date"> Year Published: ${article.published_date}<p>
@@ -51,7 +51,7 @@ world.addEventListener("click", function () {
   articles.filter((world) => world.section === "world")
     .forEach(world => {
       DOMSelectors.main.insertAdjacentHTML
-        ("beforeend",
+        ("afterend",
           `<div id="articlecard">
           <h2> ${world.title}<h2>
           <p id="date"> Year Published: ${world.published_date}<p>
@@ -68,8 +68,8 @@ business.addEventListener("click", function () {
   DOMSelectors.display.innerHTML = " ";
   articles.filter((business) => business.section === "business")
     .forEach(business => {
-      DOMSelectors.main.insertAdjacentHTML
-        ("beforeend",
+      DOMSelectors.display.insertAdjacentHTML
+        ("afterend",
           `<div id="articlecard">
           <h2> ${business.title}<h2>
           <p id="date"> Year Published: ${business.published_date}<p>
@@ -86,7 +86,7 @@ us.addEventListener("click", function () {
   DOMSelectors.display.innerHTML = " ";
   articles.filter((us) => us.section === "business")
     .forEach(us => {
-      DOMSelectors.main.insertAdjacentHTML
+      DOMSelectors.display.insertAdjacentHTML
         ("beforeend",
           `<div id="articlecard">
           <h2> ${us.title}<h2>

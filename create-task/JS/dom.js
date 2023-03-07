@@ -3,7 +3,6 @@ const DOMSelectors = {
   main: document.getElementById("maindiv"),
   world: document.querySelectorAll(".world"),
   business: document.querySelectorAll(".business"),
-  us: document.querySelectorAll(".us"),
   display: document.querySelector("#display"),
 };
 

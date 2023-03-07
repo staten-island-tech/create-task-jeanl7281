@@ -79,37 +79,5 @@ const articles= [
     abstract:	"Icy relations between the two have long been a headache for Washington. South Korea made a significant step in improving ties this week, perhaps indicating progress to come.",
     url:	"https://www.nytimes.com/2023/03/05/world/asia/south-korea-japan-forced-labor.html",
     byline:	"By Choe Sang-Hun"
-  },
-  {
-    section:	"us",
-    title:	"U.S. to Challenge Mexican Ban on Genetically Modified Corn",
-    published_date:	"2023-03-06T12:24:16-05:00",
-    abstract: "The Biden administration said it would request talks with Mexico over a brewing trade fight.",
-    url:	"https://www.nytimes.com/2023/03/06/us/politics/mexico-ban-us-corn.html",
-    byline:	"By Ana Swanson and Linda Qiu"
-  },
-  {
-    section:	"us",
-    title: "Republican Votes Helped Washington Pile Up Debt",
-    published_date:	"2023-03-06T05:00:15-05:00",
-    abstract: "As they escalate a debt-limit standoff, House Republicans blame President Biden’s spending bills for an increase in deficits. Voting records show otherwise.",
-    url: "https://www.nytimes.com/2023/03/06/us/politics/federal-debt-republicans-democrats.html",
-    byline:	"By Jim Tankersley"
-  },
-  {
-    section:	"us",
-    title	:"U.S. Is Said to Consider Reinstating Detention of Migrant Families",
-    published_date:	"2023-03-06T19:54:44-05:00",
-    abstract:	"President Biden has turned to increasingly restrictive measures as his administration prepares for the end of Title ,42, which has allowed border authorities to swiftly expel migrants.",
-    url:	"https://www.nytimes.com/2023/03/06/us/politics/biden-immigration-family-detention.html",
-    byline:	"By Eileen Sullivan and Zolan Kanno-Youngs"
-  },
-  {
-    section:	"us", 
-    title:	"Passenger Tried to Open Door During Flight and Attacked Attendant, U.S. Says",
-    published_date:	"2023-03-06T19:42:40-05:00",
-    abstract:	"The man was charged in federal court after he tried to unlock an emergency exit and attempted to stab a flight attendant with a broken spoon, the authorities said.",
-    url:	"https://www.nytimes.com/2023/03/06/us/united-airlines-arrest-stab-flight-attendant-emergency-exit.html",
-    byline:	"By Michael Levenson and Jesus Jiménez"
   }
 ]

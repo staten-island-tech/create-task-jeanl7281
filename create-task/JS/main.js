@@ -13,8 +13,7 @@ console.log(create);
         console.log(data);
       }
       } catch (error){
-        console.log(error);
-        console.log("Sorry, but we couldn't find the specified article.");
+        console.log("error");
       }
     }
 
@@ -25,7 +24,7 @@ console.log(create);
           ("afterend",
             `<div id="articlecard">
             <h2> ${article.title}<h2>
-            <p id="date"> Year Published: ${article.published_date}<p>
+            <p id="date"> Published date: ${article.published_date}<p>
             <p id="author"> Author: ${article.byline}<p>
             <p id="desc"> ${article.abstract}<p>
             <button id="link" class="link">Article Link<button>
@@ -50,11 +49,11 @@ world.addEventListener("click", function () {
   DOMSelectors.display.innerHTML = " ";
   articles.filter((world) => world.section === "world")
     .forEach(world => {
-      DOMSelectors.main.insertAdjacentHTML
+      DOMSelectors.display.insertAdjacentHTML
         ("afterend",
           `<div id="articlecard">
           <h2> ${world.title}<h2>
-          <p id="date"> Year Published: ${world.published_date}<p>
+          <p id="date"> Published date: ${world.published_date}<p>
           <p id="author"> Author: ${world.byline}<p>
           <p id="desc"> ${world.abstract}<p>
           <h3><a href="${world.url}">Link</a></h3>
@@ -72,28 +71,10 @@ business.addEventListener("click", function () {
         ("afterend",
           `<div id="articlecard">
           <h2> ${business.title}<h2>
-          <p id="date"> Year Published: ${business.published_date}<p>
+          <p id="date"> Published date: ${business.published_date}<p>
           <p id="author"> Author: ${business.byline}<p>
           <p id="desc"> ${business.abstract}<p>
           <h3><a href="${business.url}">Link</a></h3>
-          </div>`
-        );
-    });
-});
-
-const us = document.getElementById("us");
-us.addEventListener("click", function () {
-  DOMSelectors.display.innerHTML = " ";
-  articles.filter((us) => us.section === "business")
-    .forEach(us => {
-      DOMSelectors.display.insertAdjacentHTML
-        ("beforeend",
-          `<div id="articlecard">
-          <h2> ${us.title}<h2>
-          <p id="date"> Year Published: ${us.published_date}<p>
-          <p id="author"> Author: ${us.byline}<p>
-          <p id="desc"> ${us.abstract}<p>
-          <h3><a href="${us.url}">Link</a></h3>
           </div>`
         );
     });

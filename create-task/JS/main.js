@@ -1,7 +1,7 @@
 import "../styles/style.css";
 import { DOMSelectors } from "./dom";
 import {articles} from "./file";
-console.log(create);
+
 
   async function data(articles){
     try{
@@ -32,6 +32,7 @@ console.log(create);
         );
       });
     };
+    console.log(create);
 
     document.querySelector(".btn").addEventListener("click", function () {
       if (document.body.classList.contains("light")
@@ -50,7 +51,7 @@ world.addEventListener("click", function () {
   articles.filter((world) => world.section === "world")
     .forEach(world => {
       DOMSelectors.display.insertAdjacentHTML
-        ("afterend",
+        ("beforeend",
           `<div id="articlecard">
           <h2> ${world.title}<h2>
           <p id="date"> Published date: ${world.published_date}<p>
@@ -68,7 +69,7 @@ business.addEventListener("click", function () {
   articles.filter((business) => business.section === "business")
     .forEach(business => {
       DOMSelectors.display.insertAdjacentHTML
-        ("afterend",
+        ("beforeend",
           `<div id="articlecard">
           <h2> ${business.title}<h2>
           <p id="date"> Published date: ${business.published_date}<p>
